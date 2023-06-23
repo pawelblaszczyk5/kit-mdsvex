@@ -10,6 +10,7 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extension: ".svx",
+      layout: "./src/lib/Layout.svelte",
     }),
   ],
   extensions: [".svelte", ".svx"],

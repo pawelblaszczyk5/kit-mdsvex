@@ -6,7 +6,6 @@ import { mdsvex } from "mdsvex";
 const config = {
   preprocess: [
     vitePreprocess(),
-
     mdsvex({
       extension: ".svx",
       layout: "./src/lib/Layout.svelte",
@@ -17,6 +16,12 @@ const config = {
     adapter: adapter(),
     alias: {
       "styled-system": "./styled-system/*",
+    },
+    typescript: {
+      config: (config) => {
+        config.include.push("../styled-system");
+        return config;
+      },
     },
   },
 };

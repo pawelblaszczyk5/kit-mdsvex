@@ -1,11 +1,8 @@
 <script lang="ts" context="module">
   import h1 from "$lib/Header.svelte";
+  import { hstack, vstack } from "styled-system/patterns";
 
   export { h1 };
-</script>
-
-<script lang="ts">
-  import { hstack, vstack } from "styled-system/patterns";
 </script>
 
 <slot />

@@ -1,8 +1,12 @@
-<script lang="ts">
-  import { hstack } from "styled-system/patterns";
+<script lang="ts" context="module">
   import { vstack } from "styled-system/patterns";
 
   const vstackClassName = vstack({ color: "red.800" });
+</script>
+
+<script lang="ts">
+  import { hstack } from "styled-system/patterns";
+
   const hstackClassName = hstack({ color: "green.400" });
 </script>
 

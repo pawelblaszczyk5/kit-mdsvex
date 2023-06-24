@@ -1,17 +1,21 @@
-<script>
-  import { hstack, vstack } from "styled-system/patterns";
+<script lang="ts">
+  import { hstack } from "styled-system/patterns";
+  import { vstack } from "styled-system/patterns";
+
+  const vstackClassName = vstack({ color: "red.800" });
+  const hstackClassName = hstack({ color: "green.400" });
 </script>
 
 <h1>
   <slot />
 </h1>
 
-<p class={hstack({ color: "green.400" })}>
+<p class={hstackClassName}>
   <span>Lorem</span>
   <span>Ipsum</span>
 </p>
 
-<p class={vstack({ color: "red.800" })}>
+<p class={vstackClassName}>
   <span>Lorem</span>
   <span>Ipsum</span>
 </p>

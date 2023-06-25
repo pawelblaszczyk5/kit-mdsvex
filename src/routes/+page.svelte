@@ -12,3 +12,11 @@
 <svelte:component this={data.component} />
 
 <pre>{JSON.stringify(data.metadata, null, 2)}</pre>
+
+{#await data.streamed.streamedData}
+  <p>loading...</p>
+{:then result}
+  <p>{result.data}</p>
+{:catch data}
+  <p>error :(</p>
+{/await}

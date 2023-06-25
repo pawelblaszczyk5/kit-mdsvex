@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-node";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import { mdsvex } from "mdsvex";
 
@@ -13,7 +13,10 @@ const config = {
   ],
   extensions: [".svelte", ".svx"],
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      polyfill: false,
+      precompress: true,
+    }),
     alias: {
       "styled-system": "./styled-system/*",
     },
